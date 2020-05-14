@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Application</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="application">Application</h1>
+<ul>
+<li>Database (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createdatabase">CreateDatabase</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#application_createdatabaseforfile">CreateDatabaseForFile</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#application_getdatabaseroot">GetDatabaseRoot</a>)</li>
+<li>ExpressionParser (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createexpressionparser">CreateExpressionParser</a>)</li>
+<li>GeomBuilder (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_creategeombuilder">CreateGeomBuilder</a>)</li>
+<li>Point3<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpoint3%3Ct%3E">CreatePoint3<T></a>)</li>
+<li>Point3Wrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpoint3obj">CreatePoint3Obj</a>)</li>
+<li>Point4<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpoint4%3Ct%3E">CreatePoint4<T></a>)</li>
+<li>Point4Wrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpoint4obj">CreatePoint4Obj</a>)</li>
+<li>Point<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpoint%3Ct%3E">CreatePoint<T></a>)</li>
+<li>PointWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpointobj">CreatePointObj</a>)</li>
+<li>PropertySet (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpropertyset">CreatePropertySet</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#application_createpropertysetparse">CreatePropertySetParse</a>)</li>
+<li>Schema (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createschema">CreateSchema</a>)</li>
+<li>Table (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createtable">CreateTable</a>)</li>
+<li>TileBuilder (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createtilebuilder">CreateTileBuilder</a>)</li>
+<li>TypeConverter (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createtypeconverter">CreateTypeConverter</a>)</li>
+<li>ValueSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_createvalueset">CreateValueSet</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#application_gettechnologyforfile">GetTechnologyForFile</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#application_name">Name</a>)</li>
+</ul>
+<h1 id="command">Command</h1>
+<ul>
+<li>Schema (<a href="http://www.manifold.net/doc/api/scripts-net.html#command_getschema">GetSchema</a>)</li>
+<li>Table (<a href="http://www.manifold.net/doc/api/scripts-net.html#command_run">Run</a>)</li>
+</ul>
+<h1 id="context">Context</h1>
+<ul>
+<li>Application (<a href="http://www.manifold.net/doc/api/scripts-net.html#context_application">Application</a>)</li>
+</ul>
+<h1 id="curve">Curve</h1>
+<ul>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_type">Type</a>)</li>
+</ul>
+<h1 id="curvecoord3set">Curve.Coord3Set</h1>
+<ul>
+<li>Point3<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coord3set_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coord3set_count">Count</a>)</li>
+</ul>
+<h1 id="curvecoord3setwrapper">Curve.Coord3SetWrapper</h1>
+<ul>
+<li>Point3Wrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coord3setwrapper_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coord3setwrapper_count">Count</a>)</li>
+</ul>
+<h1 id="curvecoordset">Curve.CoordSet</h1>
+<ul>
+<li>Point<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coordset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coordset_count">Count</a>)</li>
+</ul>
+<h1 id="curvecoordsetwrapper">Curve.CoordSetWrapper</h1>
+<ul>
+<li>PointWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coordsetwrapper_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_coordsetwrapper_count">Count</a>)</li>
+</ul>
+<h1 id="curvenumberset">Curve.NumberSet</h1>
+<ul>
+<li>double (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_numberset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curve_numberset_count">Count</a>)</li>
+</ul>
+<h1 id="curvecircle">CurveCircle</h1>
+<ul>
+<li>Point<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvecircle_coord">Coord</a>)</li>
+<li>PointWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvecircle_coordobj">CoordObj</a>)</li>
+</ul>
+<h1 id="curvecircle3">CurveCircle3</h1>
+<ul>
+<li>Point3<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvecircle3_coord3">Coord3</a>)</li>
+<li>Point3Wrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvecircle3_coord3obj">Coord3Obj</a>)</li>
+</ul>
+<h1 id="curveellipse">CurveEllipse</h1>
+<ul>
+<li>Point<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse_center">Center</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse_coord">Coord</a>)</li>
+<li>PointWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse_centerobj">CenterObj</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse_coordobj">CoordObj</a>)</li>
+<li>double (<a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse_axis">Axis</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse_axisrotation">AxisRotation</a>)</li>
+</ul>
+<h1 id="curveellipse3">CurveEllipse3</h1>
+<ul>
+<li>Point3<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse3_center3">Center3</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse3_coord3">Coord3</a>)</li>
+<li>Point3Wrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse3_center3obj">Center3Obj</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse3_coord3obj">Coord3Obj</a>)</li>
+<li>double (<a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse3_axis">Axis</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curveellipse3_axisrotation">AxisRotation</a>)</li>
+</ul>
+<h1 id="curvespline">CurveSpline</h1>
+<ul>
+<li>CoordSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline_coords">Coords</a>)</li>
+<li>CoordSetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline_coordobjs">CoordObjs</a>)</li>
+<li>NumberSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline_knots">Knots</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline_weights">Weights</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline_order">Order</a>)</li>
+</ul>
+<h1 id="curvespline3">CurveSpline3</h1>
+<ul>
+<li>Coord3Set (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline3_coord3s">Coord3s</a>)</li>
+<li>Coord3SetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline3_coord3objs">Coord3Objs</a>)</li>
+<li>NumberSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline3_knots">Knots</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline3_weights">Weights</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#curvespline3_order">Order</a>)</li>
+</ul>
+<h1 id="database">Database</h1>
+<ul>
+<li>Command (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_runcompile">RunCompile</a>)</li>
+<li>Database (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_getcache">GetCache</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_getchild">GetChild</a>)</li>
+<li>ExpressionParser (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_createexpressionparser">CreateExpressionParser</a>)</li>
+<li>PropertySet (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_getproperties">GetProperties</a>)</li>
+<li>Table (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_run">Run</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_search">Search</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_candelete">CanDelete</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_candesign">CanDesign</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_caninsert">CanInsert</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_canmigrate">CanMigrate</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_canrefresh">CanRefresh</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_canrename">CanRename</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_canrun">CanRun</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_cansave">CanSave</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_cansavecompact">CanSaveCompact</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_ismigrateneeded">IsMigrateNeeded</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_isreadonly">IsReadOnly</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_issaveasneeded">IsSaveAsNeeded</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_issavecompactneeded">IsSaveCompactNeeded</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_issaveneeded">IsSaveNeeded</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#database_connection">Connection</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_getcomponenttype">GetComponentType</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_getproperty">GetProperty</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_insert">Insert</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_rename">Rename</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_technology">Technology</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#database_technologyresolved">TechnologyResolved</a>)</li>
+</ul>
+<h1 id="expression">Expression</h1>
+<ul>
+<li>ValueSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#expression_evaluate">Evaluate</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#expression_getsource">GetSource</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#expression_gettarget">GetTarget</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#expression_text">Text</a>)</li>
+</ul>
+<h1 id="expressionparser">ExpressionParser</h1>
+<ul>
+<li>Expression (<a href="http://www.manifold.net/doc/api/scripts-net.html#expressionparser_createexpression">CreateExpression</a>)</li>
+</ul>
+<h1 id="geom">Geom</h1>
+<ul>
+<li>BranchSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branches">Branches</a>)</li>
+<li>Coord3Set (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coord3s">Coord3s</a>)</li>
+<li>Coord3SetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coord3objs">Coord3Objs</a>)</li>
+<li>CoordSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coords">Coords</a>)</li>
+<li>CoordSetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coordobjs">CoordObjs</a>)</li>
+<li>CurveSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_curves">Curves</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_hascurves">HasCurves</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#geom_hasz">HasZ</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#geom_isarea">IsArea</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#geom_isline">IsLine</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#geom_ispoint">IsPoint</a>)</li>
+<li>byte[] (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_getbytes">GetBytes</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_opts">Opts</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_type">Type</a>)</li>
+</ul>
+<h1 id="geombranch">Geom.Branch</h1>
+<ul>
+<li>Coord3Set (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_coord3s">Coord3s</a>)</li>
+<li>Coord3SetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_coord3objs">Coord3Objs</a>)</li>
+<li>CoordSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_coords">Coords</a>)</li>
+<li>CoordSetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_coordobjs">CoordObjs</a>)</li>
+<li>CurveSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_curves">Curves</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_begin">Begin</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branch_end">End</a>)</li>
+</ul>
+<h1 id="geombranchset">Geom.BranchSet</h1>
+<ul>
+<li>Branch (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branchset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_branchset_count">Count</a>)</li>
+</ul>
+<h1 id="geomcoord3set">Geom.Coord3Set</h1>
+<ul>
+<li>Point3<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coord3set_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coord3set_count">Count</a>)</li>
+</ul>
+<h1 id="geomcoord3setwrapper">Geom.Coord3SetWrapper</h1>
+<ul>
+<li>Point3Wrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coord3setwrapper_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coord3setwrapper_count">Count</a>)</li>
+</ul>
+<h1 id="geomcoordset">Geom.CoordSet</h1>
+<ul>
+<li>Point<double> (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coordset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coordset_count">Count</a>)</li>
+</ul>
+<h1 id="geomcoordsetwrapper">Geom.CoordSetWrapper</h1>
+<ul>
+<li>PointWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coordsetwrapper_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_coordsetwrapper_count">Count</a>)</li>
+</ul>
+<h1 id="geomcurveset">Geom.CurveSet</h1>
+<ul>
+<li>Curve (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_curveset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#geom_curveset_count">Count</a>)</li>
+</ul>
+<h1 id="geombuilder">GeomBuilder</h1>
+<ul>
+<li>Geom (<a href="http://www.manifold.net/doc/api/scripts-net.html#geombuilder_endgeom">EndGeom</a>)</li>
+</ul>
+<h1 id="geomwkb">GeomWKB</h1>
+<ul>
+<li>byte[] (<a href="http://www.manifold.net/doc/api/scripts-net.html#geomwkb_getbytes">GetBytes</a>)</li>
+</ul>
+<h1 id="point">Point</h1>
+<ul>
+<li>Point<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#point_point">Point</a>)</li>
+<li>T (<a href="http://www.manifold.net/doc/api/scripts-net.html#point_x">X</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point_y">Y</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#point_toobject">ToObject</a>)</li>
+<li>struct (<a href="http://www.manifold.net/doc/api/scripts-net.html#point_point%3Ct%3E">Point<T></a>)</li>
+</ul>
+<h1 id="point3">Point3</h1>
+<ul>
+<li>Point3<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#point3_point3">Point3</a>)</li>
+<li>T (<a href="http://www.manifold.net/doc/api/scripts-net.html#point3_x">X</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point3_y">Y</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point3_z">Z</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#point3_toobject">ToObject</a>)</li>
+<li>struct (<a href="http://www.manifold.net/doc/api/scripts-net.html#point3_point3%3Ct%3E">Point3<T></a>)</li>
+</ul>
+<h1 id="point3wrapper">Point3Wrapper</h1>
+<ul>
+<li>double (<a href="http://www.manifold.net/doc/api/scripts-net.html#point3wrapper_x">X</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point3wrapper_y">Y</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point3wrapper_z">Z</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#point3wrapper_tonative">ToNative</a>)</li>
+</ul>
+<h1 id="point4">Point4</h1>
+<ul>
+<li>Point4<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#point4_point4">Point4</a>)</li>
+<li>T (<a href="http://www.manifold.net/doc/api/scripts-net.html#point4_w">W</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point4_x">X</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point4_y">Y</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point4_z">Z</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#point4_toobject">ToObject</a>)</li>
+<li>struct (<a href="http://www.manifold.net/doc/api/scripts-net.html#point4_point4%3Ct%3E">Point4<T></a>)</li>
+</ul>
+<h1 id="point4wrapper">Point4Wrapper</h1>
+<ul>
+<li>double (<a href="http://www.manifold.net/doc/api/scripts-net.html#point4wrapper_w">W</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point4wrapper_x">X</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point4wrapper_y">Y</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#point4wrapper_z">Z</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#point4wrapper_tonative">ToNative</a>)</li>
+</ul>
+<h1 id="pointwrapper">PointWrapper</h1>
+<ul>
+<li>double (<a href="http://www.manifold.net/doc/api/scripts-net.html#pointwrapper_x">X</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#pointwrapper_y">Y</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#pointwrapper_tonative">ToNative</a>)</li>
+</ul>
+<h1 id="property">Property</h1>
+<ul>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#property_data">Data</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#property_name">Name</a>)</li>
+</ul>
+<h1 id="propertyset">PropertySet</h1>
+<ul>
+<li>IEnumerable (<a href="http://www.manifold.net/doc/api/scripts-net.html#propertyset_enumobj">EnumObj</a>)</li>
+<li>IEnumerator<Property> (<a href="http://www.manifold.net/doc/api/scripts-net.html#propertyset_getenumerator">GetEnumerator</a>)</li>
+<li>Property (<a href="http://www.manifold.net/doc/api/scripts-net.html#propertyset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#propertyset_count">Count</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#propertyset_getproperty">GetProperty</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#propertyset_tojson">ToJson</a>)</li>
+</ul>
+<h1 id="root">Root</h1>
+<ul>
+<li>Application (<a href="http://www.manifold.net/doc/api/scripts-net.html#root_application">Application</a>)</li>
+<li>Root (<a href="http://www.manifold.net/doc/api/scripts-net.html#root_root">Root</a>)</li>
+</ul>
+<h1 id="schema">Schema</h1>
+<ul>
+<li>ConstraintSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraints">Constraints</a>)</li>
+<li>FieldSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_fields">Fields</a>)</li>
+<li>IndexSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexes">Indexes</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_hasitem">HasItem</a>)</li>
+</ul>
+<h1 id="schemaconstraint">Schema.Constraint</h1>
+<ul>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraint_expression">Expression</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraint_expressioncontext">ExpressionContext</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraint_name">Name</a>)</li>
+</ul>
+<h1 id="schemaconstraintset">Schema.ConstraintSet</h1>
+<ul>
+<li>Constraint (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraintset_indexers">indexers</a>)</li>
+<li>IEnumerable (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraintset_enumobj">EnumObj</a>)</li>
+<li>IEnumerator<Constraint> (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraintset_getenumerator">GetEnumerator</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_constraintset_count">Count</a>)</li>
+</ul>
+<h1 id="schemafield">Schema.Field</h1>
+<ul>
+<li>Type (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_field_typeclr">TypeClr</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_field_expression">Expression</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_field_expressioncontext">ExpressionContext</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_field_name">Name</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_field_type">Type</a>)</li>
+</ul>
+<h1 id="schemafieldset">Schema.FieldSet</h1>
+<ul>
+<li>Field (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_fieldset_indexers">indexers</a>)</li>
+<li>IEnumerable (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_fieldset_enumobj">EnumObj</a>)</li>
+<li>IEnumerator<Field> (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_fieldset_getenumerator">GetEnumerator</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_fieldset_count">Count</a>)</li>
+</ul>
+<h1 id="schemaindex">Schema.Index</h1>
+<ul>
+<li>IndexFieldSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_index_fields">Fields</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_index_hasfield">HasField</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_index_name">Name</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_index_type">Type</a>)</li>
+</ul>
+<h1 id="schemaindexfield">Schema.IndexField</h1>
+<ul>
+<li>Type (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_tiletypeclr">TileTypeClr</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_descending">Descending</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_ignoreaccent">IgnoreAccent</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_ignorecase">IgnoreCase</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_ignoresymbols">IgnoreSymbols</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_collation">Collation</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_name">Name</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_tilereduce">TileReduce</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_tilesize">TileSize</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfield_tiletype">TileType</a>)</li>
+</ul>
+<h1 id="schemaindexfieldset">Schema.IndexFieldSet</h1>
+<ul>
+<li>IEnumerable (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfieldset_enumobj">EnumObj</a>)</li>
+<li>IEnumerator<IndexField> (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfieldset_getenumerator">GetEnumerator</a>)</li>
+<li>IndexField (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfieldset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexfieldset_count">Count</a>)</li>
+</ul>
+<h1 id="schemaindexset">Schema.IndexSet</h1>
+<ul>
+<li>IEnumerable (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexset_enumobj">EnumObj</a>)</li>
+<li>IEnumerator<Index> (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexset_getenumerator">GetEnumerator</a>)</li>
+<li>Index (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexset_indexers">indexers</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#schema_indexset_count">Count</a>)</li>
+</ul>
+<h1 id="sequence">Sequence</h1>
+<ul>
+<li>Sequence (<a href="http://www.manifold.net/doc/api/scripts-net.html#sequence_recompose">Recompose</a>)</li>
+<li>ValueSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#sequence_getvalues">GetValues</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#sequence_getvaluessec">GetValuesSec</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#sequence_fetch">Fetch</a>)</li>
+</ul>
+<h1 id="table">Table</h1>
+<ul>
+<li>Schema (<a href="http://www.manifold.net/doc/api/scripts-net.html#table_getschema">GetSchema</a>)</li>
+<li>Sequence (<a href="http://www.manifold.net/doc/api/scripts-net.html#table_search">Search</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_searchall">SearchAll</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_searchbatch">SearchBatch</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_searchbatchbtree">SearchBatchBTree</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_searchbatchrtree">SearchBatchRTree</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_searchbatchrtreethin">SearchBatchRTreeThin</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#table_candelete">CanDelete</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_candesign">CanDesign</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_cangetversions">CanGetVersions</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_caninsert">CanInsert</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_canrename">CanRename</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_canupdate">CanUpdate</a>)</li>
+<li>long (<a href="http://www.manifold.net/doc/api/scripts-net.html#table_delete">Delete</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_deleteall">DeleteAll</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_deletebatch">DeleteBatch</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_getversionfield">GetVersionField</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_getversionscope">GetVersionScope</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_insert">Insert</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_insertbatch">InsertBatch</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_insertcapturekeys">InsertCaptureKeys</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_update">Update</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#table_updatebatch">UpdateBatch</a>)</li>
+</ul>
+<h1 id="tile">Tile</h1>
+<ul>
+<li>PixelSetMask (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelmissingmasks">PixelMissingMasks</a>)</li>
+<li>PixelSetObject (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixels">Pixels</a>)</li>
+<li>PixelSetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelobjs">PixelObjs</a>)</li>
+<li>Type (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_typeclr">TypeClr</a>)</li>
+<li>byte[] (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_getbytes">GetBytes</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_height">Height</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#tile_width">Width</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_type">Type</a>)</li>
+</ul>
+<h1 id="tilepixelsetmask">Tile.PixelSetMask</h1>
+<ul>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetmask_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetmask_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilepixelsetnumbert">Tile.PixelSetNumber<T></h1>
+<ul>
+<li>T (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetnumber%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetnumber%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilepixelsetpoint3t">Tile.PixelSetPoint3<T></h1>
+<ul>
+<li>Point3<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetpoint3%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetpoint3%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilepixelsetpoint4t">Tile.PixelSetPoint4<T></h1>
+<ul>
+<li>Point4<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetpoint4%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetpoint4%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilepixelsetpointt">Tile.PixelSetPoint<T></h1>
+<ul>
+<li>Point<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetpoint%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetpoint%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilepixelsetwrapper">Tile.PixelSetWrapper</h1>
+<ul>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetwrapper_getpixel">GetPixel</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#tile_pixelsetwrapper_indexers">indexers</a>)</li>
+</ul>
+<h1 id="tilebuilder">TileBuilder</h1>
+<ul>
+<li>PixelSetMask (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelmissingmasks">PixelMissingMasks</a>)</li>
+<li>PixelSetObject (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixels">Pixels</a>)</li>
+<li>PixelSetWrapper (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelobjs">PixelObjs</a>)</li>
+<li>Tile (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_endtile">EndTile</a>)</li>
+<li>Type (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_typeclr">TypeClr</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_height">Height</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_width">Width</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_type">Type</a>)</li>
+</ul>
+<h1 id="tilebuilderpixelsetmask">TileBuilder.PixelSetMask</h1>
+<ul>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetmask_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetmask_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilebuilderpixelsetnumbert">TileBuilder.PixelSetNumber<T></h1>
+<ul>
+<li>T (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetnumber%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetnumber%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilebuilderpixelsetpoint3t">TileBuilder.PixelSetPoint3<T></h1>
+<ul>
+<li>Point3<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetpoint3%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetpoint3%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilebuilderpixelsetpoint4t">TileBuilder.PixelSetPoint4<T></h1>
+<ul>
+<li>Point4<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetpoint4%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetpoint4%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilebuilderpixelsetpointt">TileBuilder.PixelSetPoint<T></h1>
+<ul>
+<li>Point<T> (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetpoint%3Ct%3E_indexers">indexers</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetpoint%3Ct%3E_getpixel">GetPixel</a>)</li>
+</ul>
+<h1 id="tilebuilderpixelsetwrapper">TileBuilder.PixelSetWrapper</h1>
+<ul>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetwrapper_getpixel">GetPixel</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#tilebuilder_pixelsetwrapper_indexers">indexers</a>)</li>
+</ul>
+<h1 id="typeconverter">TypeConverter</h1>
+<ul>
+<li>Tile (<a href="http://www.manifold.net/doc/api/scripts-net.html#typeconverter_converttilepixels">ConvertTilePixels</a>)</li>
+<li>Type (<a href="http://www.manifold.net/doc/api/scripts-net.html#typeconverter_gettypeclr">GetTypeClr</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#typeconverter_convert">Convert</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#typeconverter_convertobj">ConvertObj</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#typeconverter_gettypemanifold">GetTypeManifold</a>)</li>
+</ul>
+<h1 id="value">Value</h1>
+<ul>
+<li>Type (<a href="http://www.manifold.net/doc/api/scripts-net.html#value_typeclr">TypeClr</a>)</li>
+<li>object (<a href="http://www.manifold.net/doc/api/scripts-net.html#value_data">Data</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#value_dataobj">DataObj</a>)</li>
+<li>string (<a href="http://www.manifold.net/doc/api/scripts-net.html#value_name">Name</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#value_type">Type</a>)</li>
+</ul>
+<h1 id="valueset">ValueSet</h1>
+<ul>
+<li>IEnumerable (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_enumobj">EnumObj</a>)</li>
+<li>IEnumerator<Value> (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_getenumerator">GetEnumerator</a>)</li>
+<li>Value (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_indexers">indexers</a>)</li>
+<li>ValueSet (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_createcopy">CreateCopy</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_createlocked">CreateLocked</a>)</li>
+<li>bool (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_hasvalue">HasValue</a>)</li>
+<li>int (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_count">Count</a>, <a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_findvalue">FindValue</a>)</li>
+<li>string[] (<a href="http://www.manifold.net/doc/api/scripts-net.html#valueset_getvaluenames">GetValueNames</a>)</li>
+</ul>
+
+    </body>
+    </html>
