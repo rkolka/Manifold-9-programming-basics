@@ -11,8 +11,10 @@ The information here appies to **sql4arc** as well and, to a lesser extent, to M
 Official documentation is available [here](https://manifold.net/doc/api/scripts-net.html ".NET API").
 
 Document ["Obtains"](https://github.com/rkolka/Manifold-9-programming-basics/blob/master/obtains.md), or which type of objects can a class/object return. 
+* Eg. a `Command` object can, among other things, return a `Table` (when `Run` is called).
 
-Document ["Obtained from"](https://github.com/rkolka/Manifold-9-programming-basics/blob/master/obtaied_from.md), or from which class/object can be obtained from.
+Document ["Obtained from"](https://github.com/rkolka/Manifold-9-programming-basics/blob/master/obtaied_from.md), or from which class/object can be obtained from. 
+* Eg. a `CoordSet` object can be, among others, obtained from a `Geom` object (by calling `Coords`).
 
 ## SQL of M9
 Official documentation is available [here](https://manifold.net/doc/mfd9/sql.htm "SQL").
