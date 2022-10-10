@@ -4,7 +4,7 @@ This repo is a community effort to provide additional documents and samples abou
 Manifold® Release 9 or Manifold® System Release 9, often referred to as Manifold 9, Release 9 or **M9**, for short, is a desktop GIS package like ArcGIS, Global Mapper, FME, MapInfo, and QGIS. We, here, think that **M9** surpasses the others in various ways.
  
 
-`M9` has a sister product called SQL for ArcGIS® Pro (aka **sql4arc**), which is basically **M9**, just tightly integrated with and packaged as ArcGIS® Pro add-in.
+**M9** has a sister product called SQL for ArcGIS® Pro (aka **sql4arc**), which is basically **M9**, just tightly integrated with and packaged as ArcGIS® Pro add-in.
 The information here appies to **sql4arc** as well and, to a lesser extent, to Manifold Viewer which is read-only version of **M9**. Viewer cannot run .NET scripts, but has full SQL capabilities. 
 
 ## .NET API of M9
