@@ -1,4 +1,4 @@
-# Manifold® Release 9[^1] programming basics
+# Manifold® Release 9 programming basics
 This repo is a community effort to provide additional documents and samples about coding in Manifold® Release 9.
 ### Never heard of Manifold® Release 9?
 Manifold® Release 9 or Manifold® System Release 9, often referred to as Manifold 9, Release 9 or **M9**, for short, is a desktop GIS package like ArcGIS, Global Mapper, FME, MapInfo, and QGIS. We, here, think that **M9** surpasses the others in various ways.
@@ -17,7 +17,4 @@ Document ["Obtained from"](https://github.com/rkolka/Manifold-9-programming-basi
 ## SQL of M9
 Official documentation is available [here](https://manifold.net/doc/mfd9/sql.htm "SQL").
 
-[*Coming soon*]
-
-[^1]: Manifold® Release 9 is a desktop GIS package like ArcGIS, Global Mapper, FME, MapInfo, and QGIS. We, here, think that `M9` surpasses the others in various ways.
-
+[*More coming soon*]
